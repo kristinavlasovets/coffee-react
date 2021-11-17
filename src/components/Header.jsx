@@ -1,7 +1,9 @@
 import React from 'react';
-import logoSvg from './assets/img/logo.png'
+import logoSvg from '../assets/img/logo.png'
+import Button from '../components/Button';
 
 function Header() {
+
     return ( 
         <div className="header">
         <div className="container">
@@ -13,7 +15,7 @@ function Header() {
                 </div>
             </div>
             <div className="header__cart">
-                <a href="/cart.html" className="button button--cart">
+                <Button className="button--cart">
                     <span>52 $</span>
                     <div className="button__delimiter"></div>
                     <svg
@@ -46,7 +48,7 @@ function Header() {
                         />
                     </svg>
                     <span>3</span>
-                </a>
+               </Button>
             </div>
         </div>
     </div>

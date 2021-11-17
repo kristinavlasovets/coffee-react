@@ -1,27 +1,17 @@
 import React from 'react';
 
-import Header from './Header';
-import Button from './Button';
+import Header from './components/Header';
+import Categories from './components/Categories';
 
 function App() {
+
     return (
         <div className="wrapper">
             <Header/>
-            <Button outline >Button</Button>
-            <Button>Smatton</Button>
             <div className="content">
                 <div className="container">
                     <div className="content__top">
-                        <div className="categories">
-                            <ul>
-                                <li className="active">All</li>
-                                <li>Drinks</li>
-                                <li>Mocha</li>
-                                <li>Latte</li>
-                                <li>Cold Brew</li>
-                                <li>Good tidings</li>
-                            </ul>
-                        </div>
+                        <Categories/>
                         <div className="sort">
                             <div className="sort__label">
                                 <svg
