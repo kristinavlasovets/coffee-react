@@ -1,18 +1,33 @@
-import React from 'react'
+import React from 'react';
 
-function Categories() {
-    return (
-        <div className="categories">
-        <ul>
-            <li className="active">All</li>
-            <li>Drinks</li>
-            <li>Mocha</li>
-            <li>Latte</li>
-            <li>Cold Brew</li>
-            <li>Good tidings</li>
-        </ul>
+function Categories({items, onClickItem}) {
+  const [activeItem, setActiveItem] = React.useState(null),
+    onSelectItem = (index) => {
+      setActiveItem(index);
+    };
+
+  return (
+    <div className="categories">
+      <ul>
+        <li
+          className={activeItem === null ? 'active' : ''}
+          onClick={() => onSelectItem(null)}
+          className="active"
+        >
+          All
+        </li>
+        {items.map((name, index) => (
+          <li
+            className={activeItem === index ? 'active' : ''}
+            onClick={() => onSelectItem(index)}
+            key={`${name}_${index}`}
+          >
+            {name}
+          </li>
+        ))}
+      </ul>
     </div>
-    )
+  );
 }
 
-export default Categories
+export default Categories;
