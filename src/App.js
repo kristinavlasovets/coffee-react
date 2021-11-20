@@ -19,8 +19,8 @@ function App() {
                             'Good tidings'
                         ]} />
 
-                        <SortPopup/>
-        
+                        <SortPopup items={['popularity', 'price', 'A - Z']} />
+
                     </div>
                     <h2 className="content__title">Menu</h2>
                     <div className="content__items">
