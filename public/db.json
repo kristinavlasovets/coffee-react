@@ -1,0 +1,24 @@
+{
+  "goods": [
+    {
+      "id": 0,
+      "imageSrc": "../src/assets/img/goods/p-mocha.png",
+      "name": "Peppermint Mocha",
+      "types": [0, 1],
+      "sizes": ["Tall", "Grande", "Venti"],
+      "price": 22,
+      "category": 0,
+      "rating": 5
+    },
+    {
+      "id": 0,
+      "imageSrc": "../src/assets/img/goods/p-mocha.png",
+      "name": "Peppermint Mocha",
+      "types": [0, 1],
+      "sizes": ["Tall", "Grande", "Venti"],
+      "price": 22,
+      "category": 0,
+      "rating": 5
+    }
+  ]
+}
