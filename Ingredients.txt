@@ -4,30 +4,45 @@ Tall
 Grande
 Venti
 
+0 All
+1 Drinks
+2 Mocha
+3 Latte
+4 Cold Brew
+5 Good tidings
+
 
 Peppermint Mocha
 Espresso and steamed milk join peppermint-flavored syrup and mocha sauce—all topped with whipped cream and dark-chocolate curls.
+Categories: Drinks, Mocha
 
 
 NEW Iced Sugar Cookie Almondmilk Latte
 We combine sugar cookie–flavored syrup with Starbucks® Blonde Roast espresso and almondmilk over ice, and then add red and green sprinkles.
+Categories: Drinks, Latte
 
 
 Toasted White Chocolate Mocha Frappuccino® blended beverage
 Frappuccino® Roast coffee, milk and caramelized white chocolate flavors get topped with whipped cream, sugar sparkles and crispy white pearls.
+Categories: Drinks, Mocha
 
 Chestnut Praline Latte
 Espresso and steamed milk with notes of caramelized chestnut and spices. Finished with whipped cream and spiced praline crumbs.
+Categories: Drinks, Latte
 
 Caramel Brulée Latte
 Rich caramel brulée sauce meets espresso and steamed milk. For the finishing touch—whipped cream and a caramel brulée topping.
+Categories: Drinks, Latte
 
 Irish Cream Cold Brew
 Our Starbucks® Cold Brew is sweetened with Irish cream–flavored syrup and finished with sweet cream cold foam and a strike of cocoa powder.
+Categories: Drinks, Brew
 
 Cranberry Bliss® Bar
 Our blondie cake with dried cranberries is topped with cream-cheese icing, orange zest and more dried cranberries.
+Categories: Good tidings
 
 
 NEW Reindeer Cake Pop
 Our sweetly decorated cake pop starts with creamy vanilla cake, and then gets coated with chocolaty icing.
+Categories: Good tidings
