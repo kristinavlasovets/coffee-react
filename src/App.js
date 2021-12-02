@@ -8,18 +8,15 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
 
-    // const [goods, setGoods] = React.useState([])
+    const [goods, setGoods] = React.useState([])
 
-    // React.useEffect(() => {
-    //     fetch('http://localhost:3000/db.json')
-    //         .then((resp) => resp.json())
-    //         .then(json => {
-    //             setGoods(json.goods);
-    //         });
-    // }, []);
-
-    // console.log(goods)
-
+    React.useEffect(() => {
+        fetch('http://localhost:3000/db.json')
+            .then((resp) => resp.json())
+            .then(json => {
+                setGoods(json.goods);
+            });
+    }, []);
 
     return (
         <div className="wrapper">
