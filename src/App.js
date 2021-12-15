@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 import { Header } from './components';
 import { Home, Cart } from './pages';
@@ -11,11 +12,10 @@ function App() {
     const [goods, setGoods] = React.useState([])
 
     React.useEffect(() => {
-        fetch('http://localhost:3000/db.json')
-            .then((resp) => resp.json())
-            .then(json => {
-                setGoods(json.goods);
-            });
+        axios.get('http://localhost:3000/db.json').then(({ data }) => {
+            setGoods(data.goods)
+        });
+
     }, []);
 
     return (
@@ -23,7 +23,7 @@ function App() {
             <Header />
             <div className="content">
                 <Routes>
-                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/" element={<Home items={goods} />}></Route>
                     <Route path="/cart" element={<Cart />}></Route>
                 </Routes>
             </div>

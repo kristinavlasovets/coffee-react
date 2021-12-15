@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Categories, SortPopup, CoffeeBlock} from '../components';
 
-function Home() {
+function Home({items}) {
   return (
     <div className="container">
       <div className="content__top">
@@ -15,7 +15,9 @@ function Home() {
       </div>
       <h2 className="content__title">Menu</h2>
       <div className="content__items">
-        <CoffeeBlock />
+        {items.map((obj) => (
+          <CoffeeBlock key={obj.id} {...obj} name={'test'} />
+        ))}
       </div>
     </div>
   );

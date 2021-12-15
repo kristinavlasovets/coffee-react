@@ -2,7 +2,7 @@
   "goods": [
     {
       "id": 0,
-      "imageSrc": "../src/assets/img/goods/p-mocha.png",
+      "imageSrc": "/img/goods/p-mocha.png",
       "name": "Peppermint Mocha",
       "types": [0, 1],
       "sizes": ["Tall", "Grande", "Venti"],
@@ -12,9 +12,9 @@
     },
     {
       "id": 1,
-      "imageSrc": "../src/assets/img/goods/i-sugar-cookie.png",
+      "imageSrc": "/img/goods/i-sugar-cookie.png",
       "name": "NEW Iced Sugar Cookie Almondmilk Latte",
-      "types": [0, 1],
+      "types": [0],
       "sizes": ["Tall", "Grande", "Venti"],
       "price": 23,
       "category": [0, 1, 3],
@@ -22,7 +22,7 @@
     },
     {
       "id": 2,
-      "imageSrc": "../src/assets/img/goods/toasted-mocha.png",
+      "imageSrc": "/img/goods/toasted-mocha.png",
       "name": "Toasted White Chocolate Mocha Frappuccino® blended beverage",
       "types": [0, 1],
       "sizes": ["Tall", "Grande", "Venti"],
@@ -32,7 +32,7 @@
     },
     {
       "id": 3,
-      "imageSrc": "../src/assets/img/goods/chestnut-praline.png",
+      "imageSrc": "/img/goods/chestnut-praline.png",
       "name": "Chestnut Praline Latte",
       "types": [0, 1],
       "sizes": ["Tall", "Grande", "Venti"],
@@ -42,7 +42,7 @@
     },
     {
       "id": 4,
-      "imageSrc": "../src/assets/img/goods/brulee.png",
+      "imageSrc": "/img/goods/brulee.png",
       "name": "Caramel Brulée Latte",
       "types": [0, 1],
       "sizes": ["Tall", "Grande", "Venti"],
@@ -52,7 +52,7 @@
     },
     {
       "id": 5,
-      "imageSrc": "../src/assets/img/goods/irish-brew.png",
+      "imageSrc": "/img/goods/irish-brew.png",
       "name": "Irish Cream Cold Brew",
       "types": [0, 1],
       "sizes": ["Tall", "Grande", "Venti"],
@@ -62,9 +62,9 @@
     },
     {
       "id": 6,
-      "imageSrc": "../src/assets/img/goods/blondie.png",
+      "imageSrc": "/img/goods/blondie.png",
       "name": "Cranberry Bliss® Bar",
-      "types": [0, 1],
+      "types": [],
       "sizes": ["1pc", "2pcs", "3pcs"],
       "price": 12,
       "category": [0, 5],
@@ -72,9 +72,9 @@
     },
     {
       "id": 7,
-      "imageSrc": "../src/assets/img/goods/cakepop.png",
+      "imageSrc": "/img/goods/cakepop.png",
       "name": "NEW Reindeer Cake Pop",
-      "types": [0, 1],
+      "types": [],
       "sizes": ["1pc", "2pcs", "3pcs"],
       "price": 7,
       "category": [0, 5],
