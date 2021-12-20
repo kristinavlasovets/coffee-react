@@ -75,6 +75,10 @@ function CoffeeBlock({name, imageSrc, price, types, sizes}) {
 
 CoffeeBlock.propTypes = {
   name: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  types: PropTypes.arrayOf(PropTypes.number).isRequired,
+  sizes: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default CoffeeBlock;
