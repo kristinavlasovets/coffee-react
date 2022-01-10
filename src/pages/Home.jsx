@@ -21,9 +21,7 @@ function Home({items}) {
       </div>
       <h2 className="content__title">Menu</h2>
       <div className="content__items">
-        {items.map((obj) => (
-          <CoffeeBlock key={obj.id} {...obj} />
-        ))}
+        {items && items.map((obj) => <CoffeeBlock key={obj.id} {...obj} />)}
       </div>
     </div>
   );

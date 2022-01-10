@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { Header } from './components';
 import { Home, Cart } from './pages';
@@ -8,64 +8,33 @@ import { Routes, Route } from 'react-router-dom';
 
 import { setGoods, setGoods as setGoodsAction } from './redux/actions/goods';
 
-// function App() {
+function App() {
 
-// React.useEffect(() => {
-//     axios.get('http://localhost:3000/db.json').then(({ data }) => {
-//         setGoods(data.goods)
-//     });
+    const dispatch = useDispatch();
+    const { items } = useSelector(({ goods, filters }) => {
+        return {
+            items: goods.items,
+            sortBy: filters.sortBy
+        }
+    });
 
-// }, []);
-
-//     return;
-
-//     // (
-//     //     <div className="wrapper">
-//     //         <Header />
-//     //         <div className="content">
-//     //             <Routes>
-//     //                 <Route path="/" element={<Home items={goods} />}></Route>
-//     //                 <Route path="/cart" element={<Cart />}></Route>
-//     //             </Routes>
-//     //         </div>
-//     //     </div>
-//     // );
-
-
-// }
-
-class App extends React.Component {
-
-    componentDidMount() {
+    React.useEffect(() => {
         axios.get('http://localhost:3000/db.json').then(({ data }) => {
-            this.props.setGoods(data.goods);
+            dispatch(setGoods(data.goods))
         });
-    }
-    render() {
-        return (
-            <div className="wrapper">
-                <Header />
-                <div className="content">
-                    <Routes>
-                        <Route path="/" element={<Home items={this.props.items} />}></Route>
-                        <Route path="/cart" element={<Cart />}></Route>
-                    </Routes>
-                </div>
+    }, []);
+
+    return (
+        <div className="wrapper">
+            <Header />
+            <div className="content">
+                <Routes>
+                    <Route path="/" element={<Home items={items} />}></Route>
+                    <Route path="/cart" element={<Cart />}></Route>
+                </Routes>
             </div>
-        )
-    }
-}
+        </div>
+    )
+};
 
-const mapStateToProps = state => {
-    return {
-        items: state.goods.items,
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-        setGoods: (items) => dispatch(setGoodsAction(items))
-    };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
