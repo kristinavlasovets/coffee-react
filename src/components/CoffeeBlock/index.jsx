@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import CoffeeLoadingBlock from './CoffeeLoadingBlock';
+
 function CoffeeBlock({name, imageSrc, price, types, sizes}) {
   const availableTypes = ['Holiday Blend', 'Decaf'];
   const availableSizes = ['Tall', 'Grande', 'Venti'];
