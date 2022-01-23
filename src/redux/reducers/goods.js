@@ -4,15 +4,34 @@ const initialState = {
 };
 
 const goods = (state = initialState, action) => {
-    if (action.type === 'SET_GOODS') {
-        return {
-            ...state,
-            items: action.payload,
-            isLoaded: true,
-        };
+
+    switch (action.type) {
+        case 'SET_GOODS':
+            return {
+                ...state,
+                items: action.payload,
+                isLoaded: true,
+            };
+        case 'SET_LOADED':
+            return {
+                ...state,
+                isLoaded: action.payload,
+            };
+
+        default:
+            return state;
     }
 
-    return state;
+
+    // if (action.type === 'SET_GOODS') {
+
+    // }
+
+    // if (action.type === 'SET_LOADED') {
+
+    // }
+
+    // return state;
 
 };
 
