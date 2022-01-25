@@ -11,6 +11,7 @@ import {
 
 import {setCategory, setSortBy} from '../redux/actions/filters';
 import {fetchGoods} from '../redux/actions/goods';
+import {addGoodsToCart} from '../redux/actions/cart';
 
 const categoryNames = [
   'Frappuccino',
@@ -28,8 +29,11 @@ const sortItems = [
 function Home() {
   const dispatch = useDispatch();
   const items = useSelector(({goods}) => goods.items);
+  const cartItems = useSelector(({cart}) => cart.items);
   const isLoaded = useSelector(({goods}) => goods.isLoaded);
   const {sortBy, category} = useSelector(({filters}) => filters);
+
+  console.log(cartItems);
 
   React.useEffect(() => {
     dispatch(fetchGoods(sortBy, category));
@@ -42,6 +46,13 @@ function Home() {
   const onSelectSortType = React.useCallback((type) => {
     dispatch(setSortBy(type));
   }, []);
+
+  const handleAddGoodsToCart = (obj) => {
+    dispatch({
+      type: 'ADD_GOODS_CART',
+      payload: obj,
+    });
+  };
 
   return (
     <div className="container">
@@ -62,7 +73,12 @@ function Home() {
       <div className="content__items">
         {isLoaded
           ? items.map((obj) => (
-              <CoffeeBlock key={obj.id} isLoading={true} {...obj} />
+              <CoffeeBlock
+                onClickAddGoods={handleAddGoodsToCart}
+                key={obj.id}
+                addedCount={cartItems[obj.id] && cartItems[obj.id].length}
+                {...obj}
+              />
             ))
           : Array(8)
               .fill(0)

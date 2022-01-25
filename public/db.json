@@ -24,7 +24,7 @@
       "id": 2,
       "imageSrc": "/img/goods/toasted-mocha.png",
       "name": "Toasted White Chocolate Mocha Frappuccino® blended beverage",
-      "types": [0, 1],
+      "types": [0],
       "sizes": ["Tall", "Grande", "Venti"],
       "price": 25,
       "category": [0],

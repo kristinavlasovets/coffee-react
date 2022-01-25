@@ -1,10 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Button from '../Button';
 
-import CoffeeLoadingBlock from './CoffeeLoadingBlock';
-
-function CoffeeBlock({name, imageSrc, price, types, sizes}) {
+function CoffeeBlock({
+  id,
+  name,
+  imageSrc,
+  price,
+  types,
+  sizes,
+  onClickAddGoods,
+  addedCount,
+}) {
   const availableTypes = ['Holiday Blend', 'Decaf'];
   const availableSizes = ['Tall', 'Grande', 'Venti'];
 
@@ -18,6 +26,17 @@ function CoffeeBlock({name, imageSrc, price, types, sizes}) {
     setActiveSize(index);
   };
 
+  const onAddGoods = () => {
+    const obj = {
+      id,
+      name,
+      imageSrc,
+      price,
+      size: availableSizes[activeSize],
+      type: availableTypes[activeType],
+    };
+    onClickAddGoods(obj);
+  };
   return (
     <div className="pizza-block">
       <img className="pizza-block__image" src={imageSrc} alt="Coffee" />
@@ -54,7 +73,7 @@ function CoffeeBlock({name, imageSrc, price, types, sizes}) {
       </div>
       <div className="pizza-block__bottom">
         <div className="pizza-block__price">{price} $</div>
-        <div className="button button--outline button--add">
+        <Button onClick={onAddGoods} className="button--add" outline>
           <svg
             width="12"
             height="12"
@@ -68,8 +87,8 @@ function CoffeeBlock({name, imageSrc, price, types, sizes}) {
             />
           </svg>
           <span>Add to Order</span>
-          <i>2</i>
-        </div>
+          {addedCount && <i>{addedCount}</i>}
+        </Button>
       </div>
     </div>
   );
@@ -81,6 +100,8 @@ CoffeeBlock.propTypes = {
   price: PropTypes.number.isRequired,
   types: PropTypes.arrayOf(PropTypes.number).isRequired,
   sizes: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onAddGoods: PropTypes.func,
+  addedCount: PropTypes.number,
 };
 
 export default CoffeeBlock;
