@@ -120,6 +120,7 @@ function Cart() {
               {addedGoods.map((obj) => (
                 <CartItem
                   id={obj.id}
+                  imageSrc={obj.imageSrc}
                   name={obj.name}
                   type={obj.type}
                   size={obj.size}
